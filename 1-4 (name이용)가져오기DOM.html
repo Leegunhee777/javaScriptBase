@@ -1,0 +1,33 @@
+<script>
+    //name  속성 값으로 노드 가져오기
+    //form 과 input요소 등의 폼 컨트롤,iframe,img,map,object 요소 등에 지정가능
+    //class 속성 값과 마찬가지로 요소 여러개를 대상으로 값은 이름을 사용할 수 있다.
+    // 그와달리 id는 유일해야함
+</script>
+
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+    </head>
+
+    <body>
+        <form>
+        <input type = "checkbox" name = "dog" value = "pome">포메라니안 <br>
+        <input type = "checkbox" name = "dog" value = "dalma">달마시안 <br>
+        <input type = "checkbox" name = "dog" value = "bool">불독 <br>
+        </form>
+        
+        <script>
+        var dogs = document.getElementsByName("dog");
+        dogs[1].value = "corgi"; //dalma 를 corgi로 바꿈
+        for(var i = 0 ; i< dogs.length; i ++)
+        {
+            console.log(i + " 번째의 값: " + dogs[i].value);
+        }
+            //0번째의 값 : pome
+            //1번째의 값 : corgi
+            //2번째의 값 : bool
+        </script>
+    </body>
+</html>

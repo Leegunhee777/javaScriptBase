@@ -1,0 +1,27 @@
+<script>
+    //class 속성 값으로 노드 가져오기
+</script>
+
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+    </head>
+
+    <body>
+        <div class="cat black">봄베이</div>
+        <div class="cat white">페르시안</div>
+        <div class="dog white">스피츠</div>
+        
+        <script>
+            var cats = document.getElementsByClassName("cat");
+            //식별자 "cat"을 포함하는 요소 목록을 가져와,요소내용을 출력
+            for(var i = 0 ; i < cats.length ; i++)
+            {
+                console.log(i+ "번째 고양이 :" + cats[i].innerHTML);
+            }
+            //0번째 고양이 :봄베이
+            //1번째 고양이 :페르시안
+        </script>
+    </body>
+</html>

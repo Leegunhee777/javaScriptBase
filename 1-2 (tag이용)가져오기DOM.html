@@ -1,0 +1,20 @@
+<script>
+    //요소의 이름(tag)으로 노드 가져오기<태그목록을 가져올 수 있다>
+</script>
+
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+    </head>
+
+    <body>
+        <div>첫번쨰 div</div>
+        <div>두번쨰 div</div>
+        <div>세번쨰 div</div>
+        <script>
+            var elements = document.getElementsByTagName("div");
+            elements[2].innerHTML = "여기를 수정"; //새번쨰 div 요소의 내용을 수정한다.
+        </script>
+    </body>
+</html>

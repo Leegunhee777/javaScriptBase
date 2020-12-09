@@ -1,0 +1,62 @@
+<script>
+    /* form은 사용자로부터 입력을 받는 HTML의 메커니즘이다.
+    웹서버에 데이터를 보낼떄는 다음과 같은 과정을 거친다 . 
+    우선 form 요소를 작성하고 method와 action속성을 지정한다.
+    method 속성: 데이터 전송방법 ("POST" 또는 "GET")
+    action 속성: 데이터를 저리하는 CGI 프로그램의 URL
+    */
+
+</script>
+<!DOCTYPE html>
+<html lang = "ko">
+    <head>
+        <meta charset = "UTF-8">
+        <title>간단한 폼 예제</title>>
+        <script>
+            window.onload = function(){
+                //1.밑의 두줄의 방식으로  폼요소와 폼컨트롤을 할수 있다.
+                var menu = document.getElementById("menu1");
+                var options = menu.getElementsByTagName("option");
+                console.log(options);
+                
+                //2. id 속성값, name 속성 값으로 가져올수도 있다.
+                console.log(document.forms.form1); //id 속성값으로 가져오기
+                console.log(document.forms.questions); //name 속성값으로 가져오기
+            }
+        </script>
+    </head>
+    <body>
+        <form method ="POST" action = "./cgi-bin/post.cgi" name="question" id="from1">
+        <h1>설문조사</h1>
+        <p>
+            <label>이름 :</label>
+            <input type = "text" name="name">
+        </p>
+        <p>
+            <label>성별 :</label>
+            <label><input type= "radio" name ="sex" value="male">남</label>
+            <label><input type= "radio" name ="sex" value="female">여</label>
+        </p>
+        <p>
+            <label>혈액형: </label>
+            <select name = "bloodtype" id = "menu1">
+                <option>A형</option>
+                <option>B형</option>
+                <option>C형</option>
+                <option>D형</option>
+            </select>
+
+        </p>
+        <p>
+            <h2>의견</h2>
+            <textarea name = "opinion" rows = "6" cols="80" placeholder="의견을 남겨주세요">
+
+            </textarea>
+        </p>
+        <p>
+            <input type = "submit" value = "보내기">
+            <input type = "reset" value = "취소">
+        </p>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang = "ko">
+    <head>
+    <script>
+        window.onload = function(){
+            var anchor = document.getElementById("school");
+            anchor.addEventListener("click",function(e){
+                if(!confirm("페이지를 이동하시겠습니까.")) e.preventDefault(); //confirm의 반환값이 false일경우 웹브라우저에 구현된 기본동작이 취소됨
+            },false);
+        };
+
+        //preventDefault 메소드를 사용하여 웹브라우저에 구현된 기본 동작을 취소할수있다.
+    </script>
+    </head>
+    <body>
+        <a id= "school" href="http://school.gilbut.co.kr">길벗스쿨</a>
+    </body>
+</html>

@@ -1,0 +1,33 @@
+<script>/*문서를 제어하는 API인 DOM(Document Object Model), DOM의 다양한 API를 사용하여,
+Document를 제어한다.(DOM 트리 제어)}
+*/
+//1. id 속성으로 노드 가져오기 id는 유일한 값이여야함
+</script>
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset = "UTF-8">
+    <script>
+        window.onload = function(){ //head영역에에 script를 쓸거면 window.onload를 써야함
+        var element = document.getElementById("second");
+        element.innerHTML = "여기를 수정함" // 두번쨰div 요소의 내용을 수정한다.
+        }
+       
+    </script>
+</head>
+<body>
+    <div id="first">첫번째 div</div>
+    <div id="second">두번쨰 div</div>
+    <div id="third">세번째 div</div>
+   
+    <script>
+        /*
+         var element = document.getElementById("second");
+        element.innerHTML = "여기를 수정함" // 두번쨰div 요소의 내용을 수정한다.
+        *///같은 body영역에 script는 쓸때는  window.onload안써도됨
+    </script>
+</body>
+
+</html>
+

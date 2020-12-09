@@ -1,0 +1,29 @@
+<script>
+    //removeEventListener 메서드로 이벤트 리스너 삭제하기
+    // 방법
+    // target.removeEventListener(type, listener, useCapture);
+    </script>
+
+    <!DOCTYPE html>
+    <html lang ="ko">
+        <head>
+            <meta charset ="UTF-8">
+            <script>
+                window.onload = function(){
+                    var element = document.getElementById("button");
+                    element.addEventListener("click",function(){
+                        console.log("hello");
+                        element.removeEventListener("click",arguments.callee,false);
+                        //addEventListener를 익명함수(함수의이름지정X)로 하였기때문에,arguments.callee로 삭제함
+                        //함수를 따로 정의해주어 이름이 있다면, 함수이름을 적으면 됨
+                    },false);
+                };
+            </script>
+        </head>
+        <body>
+            <button id = "button">버튼</button>
+            <script>
+                //처음 버튼 클릭시 console.log(hello)와 함께 click 이벤트가 삭제됨, 두번째 클릭부터 반응을 안하게됨
+            </script>
+        </body>
+    </html>

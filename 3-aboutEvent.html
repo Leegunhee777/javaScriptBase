@@ -1,0 +1,36 @@
+<script>
+//이벤트의 전파
+</script>
+<!DOCTYPE html>
+<html lang = "ko">
+    <head>
+        <script>
+            window.onload = function(){
+                var outer = document.getElementById("outer");
+                var inner2 = document.getElementById("inner2");
+                
+                outer.addEventListener("click",function(e){
+                    console.log("outer bubbling");
+
+                },false);
+
+                outer.addEventListener("click",function(e){
+                    console.log("outer capturing");
+                },true);
+
+                inner2.addEventListener("click",function(e){
+                    console.log("inner2 bubbling");
+                },false);
+            };
+            //자식요소에서 발생한 이벤트는 부모 요소에도 전파된다.
+            //inner2를 클릭 하면 console.log 에 outer capturing -> inner2 bubbling -> outer bubbling 찍임
+        </script>
+    </head>
+    <body>
+        <div id ="outer">outer
+
+            <div id = "inner1">inner1</div>
+            <div id = "inner2">inner2</div>
+        </div>
+    </body>
+</html>
